@@ -1,0 +1,24 @@
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5
+    prefix : classpath:/templates/
+    suffix : .html
+    servlet :
+      content-type : text/html
+    encoding: utf-8
+    cache: false
+  mvc:
+    static-path-pattern: /**
+  resources:
+    static-locations: classpath:/static/
+  profiles:
+    active: dev
+
+mybatis:
+  type-aliases-package: com.xwj.blog.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+comment.avatar: /images/avatar.png
+message.avatar: /images/avatar.png
